@@ -1,16 +1,18 @@
 programa
 {
-	inclua biblioteca Matematica --> mat
+	inclua biblioteca Matematica --> mat
 	
-	funcao inicio() {
-		//	ex1()
-		//	ex2()
-		//	ex3()
-		//	ex4()
-		//	ex5()
-		//	ex6()	
-		//	ex7()
+	funcao inicio() {
+			ex1()
+			ex2()
+			ex3()
+			ex4()
+			ex5()
+			ex6()	
+			ex7()
 			ex8()
+			ex9()
+			ex10()
 	}
 
 	funcao ex1() {
@@ -116,34 +118,123 @@ programa
 	}
 
 	funcao ex8() {
-		inteiro vetor[10], vetorpar[10], vetorimp[10], menorn, contador=0, cont=0
+		inteiro vetorpar[10], vetorimp[10], contimp=0, contpar=0, num
+
+		enquanto (contimp + contpar < 10) {
+			escreva("Insira um número\n")
+			leia(num)
+			limpa()
+
+			se(num % 2 == 0) {
+				vetorpar[contpar] = num
+				contpar++	
+			}
+			senao {
+				vetorimp[contimp] = num
+				contimp++
+			}
+		}
+		ListPar(vetorpar, contpar)
+		ListImp(vetorimp, contimp)
+		Lista(vetorpar, contpar, vetorimp, contimp)
+	}
+	// Esta função organiza os números pares recebidos por parâmetro de forma decrescente e depois os escreve
+	funcao ListPar(inteiro vetorpar[], inteiro cont) {
+		inteiro cola
+		
+		para(inteiro j=0; j < cont; j++){
+			para(inteiro i=0; i < cont-1; i++){
+				se(vetorpar[i+1] > vetorpar[i]) {
+					cola = vetorpar[i]
+					vetorpar[i] = vetorpar[i+1]
+					vetorpar[i+1] = cola
+				}
+			}
+		}
+		para(inteiro i=0; i < cont; i++){
+			escreva(vetorpar[i], "  ")
+		}
+	}
+	// Esta função organiza os números impares recebidos por parâmetro de forma crescente e depois os escreve
+	funcao ListImp(inteiro vetorimp[], inteiro cont) {
+		inteiro cola
+		
+		para(inteiro j=0; j < cont; j++){
+			para(inteiro i=0; i < cont-1; i++){
+				se(vetorimp[i+1] < vetorimp[i]) {
+					cola = vetorimp[i]
+					vetorimp[i] = vetorimp[i+1]
+					vetorimp[i+1] = cola
+				}
+			}
+		}
+		para(inteiro i=0; i < cont; i++){
+			escreva(vetorimp[i], "  ")	
+		}	
+	}
+
+	funcao Lista(inteiro vetorpar[], inteiro contpar, inteiro vetorimp[], inteiro contimp) {
+		
+		inteiro vetor[10]
+	}
+
+	funcao ex9() {
+		cadeia nomes[10], nome
+		logico cont=falso
+		
+		nomes[0]="Renato"
+		nomes[1]="Renan"
+		nomes[2]="Ricardo"
+		nomes[3]="Richard"
+		nomes[4]="Ronaldo"
+		nomes[5]="Ryan"
+		nomes[6]="Reiner"
+		nomes[7]="Raimundo"
+		nomes[8]="Reumaldir"
+		nomes[9]="Reinstein"
+
+		escreva("Insira um nome, se começar com R terá as chances dobradas de sucesso!!\n")
+		leia(nome)
 
 		para(inteiro i=0; i < 10; i++){
-			escreva("Insira um número\n")
+			se(nomes[i] == nome) {
+				cont = verdadeiro
+			}
+		}
+
+		se(cont == verdadeiro) {
+			escreva("Achei")
+		}
+		senao {
+			escreva("Não achei")
+		}
+	}
+
+	funcao ex10() {
+		inteiro vetor[20], vetor1[10], vetor2[10], cont=0
+
+		para(inteiro i=0; i < 20; i++){
+			escreva("Insira 20 números\n")
 			leia(vetor[i])
 			limpa()
+			se(i<10) {
+				vetor1[i] = vetor[i]
+			}
+			senao {
+				vetor2[cont] = vetor[i]
+				cont++
+			}
 		}
+		escreva("O vetor 1 é:\n")
 		para(inteiro i=0; i < 10; i++){
-			se(vetor[i] % 2 == 0) {
-				se(vetorpar[contador] == 0) {
-					vetorpar[contador] = vetor[i]
-					contador++
-					
-				}
-			}
-		}			
+			escreva(vetor1[i], "\n")
+		}
+		escreva("O vetor 2 é:\n")
 		para(inteiro i=0; i < 10; i++){
-			se(vetor[i] % 2 != 0) {
-				se(vetorpar[contador] == 0) {
-					vetorpar[contador] = vetor[i]
-					contador++
-				}
-			}
+			escreva(vetor2[i], "\n")
 		}
 	}
 }
-
-		
 
 
 /* $$$ Portugol Studio $$$ 
@@ -151,10 +242,10 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2262; 
- * @DOBRAMENTO-CODIGO = [15, 25, 39, 54, 67, 83, 95];
+ * @POSICAO-CURSOR = 3362; 
+ * @DOBRAMENTO-CODIGO = [17, 27, 41, 56, 69, 85, 97, 180, 212];
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {vetorpar, 119, 21, 8};
+ * @SIMBOLOS-INSPECIONADOS = {vetor1, 214, 21, 6}-{vetor2, 214, 33, 6};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */

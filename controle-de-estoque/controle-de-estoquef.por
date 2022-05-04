@@ -34,6 +34,10 @@ programa
 				leia(nome)
 				escreva("Insira o código desejado para este veículo, sendo este de 0 a 199 ")
 				leia(slot)
+				se(slot>199) {
+					escreva("Número fora dos parâmetros requisitados\n")
+					pare
+				}
 				limpa()
 				se(nomeProduto[slot] == "")
 					nomeProduto[slot] = nome
@@ -46,6 +50,14 @@ programa
 				listar(nomeProduto, numero)
 				escreva("\nQual o código do veículo a ser adicionado? ")
 				leia(slot)
+				se(slot>199 ou slot<0) {
+					escreva("Número fora dos parâmetros requisitados\n")
+					pare
+				}
+				se(nomeProduto[slot] == "") {
+					escreva("Código não cadastrado\n")
+					pare
+				}
 				numero[slot]++
 				entrada[slot]++
 				pare
@@ -84,8 +96,14 @@ programa
 				}
 				senao {
 					escreva("A entrada de ", nomeProduto[slot], " é ", entrada[slot])
-					escreva("\nE a saída deste produto é: ", saida[slot], "\n")
+					escreva("\nA saída deste produto é: ", saida[slot], "\n")
+					escreva("O saldo atual é ", numero[slot], "\n")
 				}
+
+			caso contrario: {
+				escreva("Opção inválida\n")
+				pare
+			}
 				
 			}
 			para(inteiro i=0; i < 200; i++){
@@ -111,7 +129,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1660; 
+ * @POSICAO-CURSOR = 1419; 
+ * @DOBRAMENTO-CODIGO = [118];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

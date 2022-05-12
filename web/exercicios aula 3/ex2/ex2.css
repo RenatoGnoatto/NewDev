@@ -1,0 +1,23 @@
+* {
+  margin: 10;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Jura', sans-serif;
+}
+
+body {
+  height: 100%;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caixaf {
+  width: 33.1rem;
+  height: 32.1rem;
+  background-color: #128d0f;
+}

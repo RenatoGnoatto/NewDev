@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quadrado1 {
+  width: 60rem;
+  height: 62.9rem;
+  background: rgba(45, 49, 51, 0.81);
+}
+
+img {
+  width: 549px;
+  height: 281px;
+}
+
+.quadrado1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  width: 16rem;
+  height: 5rem;
+  border-radius: 8rem;
+  background-color: #00856f;
+  color: white;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+}
+
+.par {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 54rem;
+  height: 12rem;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  text-align: justify;
+  text-transform: uppercase;
+}

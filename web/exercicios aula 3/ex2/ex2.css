@@ -1,23 +1,88 @@
 * {
-  margin: 10;
+  margin: 0;
   box-sizing: border-box;
 }
 
 :root {
   font-size: 62.5%;
-  font-family: 'Jura', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-  height: 100%;
   font-size: 1.6rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .caixaf {
-  width: 33.1rem;
-  height: 32.1rem;
-  background-color: #128d0f;
+  background-color: rgb(255, 255, 255);
+  width: 44.7rem;
+  height: 62.9rem;
+  border: 1px solid #0720fd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#con:hover {
+  color: white;
+  background-color: #00856f;
+}
+
+#can:hover {
+  color: white;
+  background-color: #8d0000;
+}
+
+#con {
+  border: 1px solid #00856f;
+  color: #00856f;
+  background-color: white;
+}
+
+#can {
+  border: 1px solid #8d0000;
+  color: #8d0000;
+  background-color: white;
+}
+
+h1,
+p,
+.bot {
+  margin-inline: auto;
+}
+
+h1 {
+  font-family: 'jura', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+p:first-child {
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  text-align: center;
+}
+
+button {
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  width: 17rem;
+  height: 5rem;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+  border-radius: 8rem;
+  cursor: pointer;
 }

@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caix1 {
+  width: 37.5rem;
+  height: 41.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-image: url(https://th.bing.com/th/id/R.f5d36629b47e60602a8db6bd58fbab7e?rik=raGqWgFxl0zl2g&riu=http%3a%2f%2fwww.angelfire.com%2fart%2ftirzah%2ftzimisce.jpg&ehk=dcFFr9SFkLdT9kdCpNRw8s4D6WDTCcqQ4xNu%2f4Ff8sI%3d&risl=&pid=ImgRaw&r=0);
+  background-repeat: no repeat;
+  background-size: contain;
+}
+
+audio {
+  width: 100%;
+}

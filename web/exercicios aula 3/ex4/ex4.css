@@ -23,11 +23,12 @@ body {
   width: 60rem;
   height: 62.9rem;
   background: rgba(45, 49, 51, 0.81);
+  padding: 2.8rem;
 }
 
 img {
-  width: 549px;
-  height: 281px;
+  width: 54.9rem;
+  height: 28.1rem;
 }
 
 .quadrado1 {
@@ -37,7 +38,10 @@ img {
   align-items: center;
 }
 
-button {
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   border: 0;
   width: 16rem;
@@ -51,6 +55,8 @@ button {
   font-size: 1.4rem;
   line-height: 1.8rem;
   text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem;
 }
 
 .par {

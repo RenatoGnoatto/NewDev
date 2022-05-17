@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html, body{
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+.cad1 {
+  padding: 2.8rem;
+  width: 60rem;
+  height: 62.9rem;
+  background: rgba(45, 49, 51, 0.81);
+}
+a {
+  width: 5.1rem;
+  height: 1.7rem;
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}

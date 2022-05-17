@@ -1,0 +1,8 @@
+i{
+  color: aqua;
+  --corfirst: #fff
+}
+
+.pre{
+  color: var(--corfirst);
+}

@@ -1,23 +1,4 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
 
-:root {
-  font-size: 62.5%;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  font-size: 1.6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .caix1 {
   width: 37.5rem;

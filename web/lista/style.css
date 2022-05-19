@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+header,
+main,
+footer {
+  width: 80%;
+  border: solid black 1px;
+  margin: 0 auto;
+}
+
+.img1 {
+  width: 10rem;
+  height: 15rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+li {
+  margin-right: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(43, 21, 121);
+  cursor: pointer;
+}
+
+header a:hover {
+  font-size: 2.5rem;
+  color: blue;
+  border: solid 1px rgb(25, 0, 255);
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social i {
+  margin-right: 2rem;
+}
+
+p,
+.dnd {
+  display: flex;
+  justify-content: center;
+}
+
+.bot {
+  display: flex;
+  justify-content: center;
+}
+
+.bot button {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  width: 10rem;
+  height: 5rem;
+  background-color: white;
+  color: rgb(3, 0, 39);
+  border: 0.1rem solid rgb(3, 0, 39);
+  cursor: pointer;
+}
+
+img {
+  margin: 1rem;
+}
+.alo {
+  display: flex;
+}

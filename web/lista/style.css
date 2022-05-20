@@ -88,10 +88,9 @@ p,
   width: 10rem;
   height: 5rem;
   background-color: rgba(141, 152, 255, 0.514);
-
 }
 
-.bot button:hover{
+.bot button:hover {
   border: 0.1rem solid rgb(21, 0, 255);
   cursor: pointer;
 }
@@ -102,27 +101,83 @@ img {
   display: flex;
 }
 
-.fig1, .fig2{
+.fig1,
+.fig2 {
   font-size: 1rem;
 }
 
-.social .fa-facebook:hover{
+.social .fa-facebook:hover {
   color: #395593;
   cursor: pointer;
 }
 
-.social .fa-twitter:hover{
-  color: #28A0d5;
+.social .fa-twitter:hover {
+  color: #28a0d5;
   cursor: pointer;
 }
 
-.list ul{
+.list ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   list-style-type: circle;
 }
 
-.list h1{
+.list h1 {
   margin-top: 2rem;
+}
+
+/*    Main About */
+
+.main-about {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-about p {
+  line-height: 3rem;
+  text-align: justify;
+  margin-top: 2rem;
+}
+
+.main-about h2 {
+  margin-top: 2rem;
+}
+
+table {
+  text-align: left;
+  border: 0.2rem solid firebrick;
+}
+
+td,
+th {
+  border-top: 1px solid #395593;
+  padding: 1rem;
+}
+
+th {
+  border-top: none;
+}
+.g {
+  display: flex;
+}
+
+.form {
+  height: 35rem;
+  width: 60%;
+  border: 1px solid black;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  height: 35rem;
+  width: 40%;
+  background-image: url(assets/aloo.jpg);
+  background-size: 100%;
+}
+
+.forml{
+  color: rgb(154, 0, 214);
 }

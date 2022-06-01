@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <title>Lista de Mensagens</title>
+</head>
+<body>
+
+  <main class="container">
+    <h1>Adicionar Mensagem</h1>
+
+    <form id="form-message">
+      <label for="from">De:</label>
+      <input id="from" type="text" autocomplete="off">
+
+      <label for="to">Para:</label>
+      <input id="to" type="text" autocomplete="off">
+
+      <label for="message">De:</label>
+
+      <textarea id="message" name="" id="" cols="30" rows="10"></textarea>
+
+      <button id="addButton">
+        Enviar
+      </button>
+    </form>
+
+    <h2>Mensagens</h2>
+    <section id="section-messages"></section>
+
+    <table>
+      <thead>
+        <tr>
+          <th>De</th>
+          <th>Para</th>
+          <th>Mensagem</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody id="tbody-messages">
+      </tbody>
+    </table>
+    
+  </main>
+  
+  <script src="https://kit.fontawesome.com/d1a9aca78a.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

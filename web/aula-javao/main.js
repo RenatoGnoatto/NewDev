@@ -12,6 +12,14 @@ function onClickEdit(lineEditing) {
   document.getElementById('message').innerHTML = message.innerHTML
 }
 
+function onClickRemove(lineRemoving) {
+  document.getElementById('from').value = null
+
+  document.getElementById('to').value = null
+
+  document.getElementById('message').innerHTML = null
+}
+
 document
   .getElementById('addButton')
   .addEventListener('click', function (event) {
@@ -74,13 +82,27 @@ document
     const tdButtons = document.createElement('td')
     const iconEdit = document.createElement('i')
     iconEdit.setAttribute('class', 'fas fa-edit')
-    iconEdit.setAttribute('style', 'cursor:pointer')
+    iconEdit.setAttribute('style', 'cursor:pointer; margin-inline: 1rem')
+    iconEdit.setAttribute('title', 'Editar')
     tdButtons.appendChild(iconEdit)
 
     const iconRemove = document.createElement('i')
     iconRemove.setAttribute('class', 'fas fa-trash')
-    iconRemove.setAttribute('style', 'cursor:pointer')
+    iconRemove.setAttribute('style', 'cursor:pointer; margin-inline: 1rem')
+    iconEdit.setAttribute('title', 'Remover')
     tdButtons.appendChild(iconRemove)
+
+    const iconArrowDown = document.createElement('i')
+    iconArrowDown.setAttribute('class', 'fas fa-arrow-down')
+    iconArrowDown.setAttribute('style', 'cursor:pointer; margin-inline: 1rem')
+    iconEdit.setAttribute('title', 'Mover abaixo')
+    tdButtons.appendChild(iconArrowDown)
+
+    const iconArrowUp = document.createElement('i')
+    iconArrowUp.setAttribute('class', 'fas fa-arrow-up')
+    iconArrowUp.setAttribute('style', 'cursor:pointer; margin-inline: 1rem')
+    iconEdit.setAttribute('title', 'Mover acima')
+    tdButtons.appendChild(iconArrowUp)
 
     tr.appendChild(tdButtons)
 
@@ -92,6 +114,11 @@ document
     iconEdit.setAttribute(
       'onclick',
       `onClickEdit(${tdButtons.parentElement.id});`
+    )
+
+    iconRemove.setAttribute(
+      'onclick',
+      `onClickRemove(${tdButtons.parentElement.id});`
     )
 
     if (lineEditingInMoment) {

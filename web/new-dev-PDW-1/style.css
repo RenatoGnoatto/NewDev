@@ -1,0 +1,92 @@
+* {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Fira Code', monospace;
+}
+
+.cmc {
+  width: 44.5rem;
+  height: 6.2rem;
+  background-color: #2f6e6d;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.cmc h1 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
+main .fundo {
+  width: 44.5rem;
+  height: 39.6rem;
+  background: #47b5b0;
+  display: flex;
+  justify-content: center;
+}
+
+.fundoForm {
+  width: 28.9rem;
+  height: 39.6rem;
+  background: #ffffff;
+}
+
+#formm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+label{
+  display: block;
+  margin-top: 2rem;
+}
+
+.fundoBot {
+  width: 44.5rem;
+  height: 6.2rem;
+  background: #2f6e6d;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  border: 0;
+}
+
+.fundoBot .cadastros {
+  width: 12.8rem;
+  height: 3.2rem;
+  background: #1a4af4;
+  border-radius: 2rem;
+}
+
+.fundoBot #enviar {
+  width: 12.8rem;
+  height: 3.2rem;
+  background: rgba(29, 208, 36, 0.78);
+  border-radius: 2rem;
+}
+
+button:hover{
+  cursor: pointer;
+}

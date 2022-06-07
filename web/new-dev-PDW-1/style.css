@@ -49,13 +49,13 @@ main .fundo {
   background: #ffffff;
 }
 
-#formm{
+#formm {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-label{
+label {
   display: block;
   margin-top: 2rem;
 }
@@ -69,24 +69,29 @@ label{
   justify-content: center;
 }
 
-button {
+.fundoBot button {
   border: 0;
-}
-
-.fundoBot .cadastros {
-  width: 12.8rem;
-  height: 3.2rem;
-  background: #1a4af4;
-  border-radius: 2rem;
+  background: #ffffff6b;
 }
 
 .fundoBot #enviar {
   width: 12.8rem;
   height: 3.2rem;
-  background: rgba(29, 208, 36, 0.78);
   border-radius: 2rem;
+  border: 2px solid rgba(29, 208, 36, 0.78)
 }
 
-button:hover{
+.fundoBot #enviar:hover {
+  background: rgba(29, 208, 36, 0.78);
+  border: 0;
+}
+
+.fundoBot button:hover {
   cursor: pointer;
+}
+
+#cadastros{
+  width: 44.5rem;
+  height: 10rem;
+  background-color: #2f6e6d;
 }

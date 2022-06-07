@@ -75,7 +75,7 @@ document
     const to = document.getElementById('to').value
     const messageValue = document.getElementById('message').value
 
-    if (!to.length) {
+    if (to.length) {
       alert('O remetente deve ser informado')
       return
     }

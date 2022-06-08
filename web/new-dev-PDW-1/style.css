@@ -37,7 +37,7 @@ body {
 
 main .fundo {
   width: 44.5rem;
-  height: 39.6rem;
+  height: 37rem;
   background: #47b5b0;
   display: flex;
   justify-content: center;
@@ -45,14 +45,14 @@ main .fundo {
 
 .fundoForm {
   width: 28.9rem;
-  height: 39.6rem;
+  height: 37rem;
   background: #ffffff;
 }
 
 #formm {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 label {
@@ -78,7 +78,7 @@ label {
   width: 12.8rem;
   height: 3.2rem;
   border-radius: 2rem;
-  border: 2px solid rgba(29, 208, 36, 0.78)
+  border: 2px solid rgba(29, 208, 36, 0.78);
 }
 
 .fundoBot #enviar:hover {
@@ -90,8 +90,27 @@ label {
   cursor: pointer;
 }
 
-#cadastros{
+#list-section {
   width: 44.5rem;
-  height: 10rem;
-  background-color: #2f6e6d;
+  height: 20rem;
+  background-color: #47b5b0;
+}
+
+#list-background {
+  width: 30rem;
+  height: 20rem;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul {
+  margin-left: 3rem;
+  display: block;
+  align-items: center;
+  list-style: none;
+  max-height: 15rem;
+  min-height: 15rem;
+  overflow-y: auto;
 }

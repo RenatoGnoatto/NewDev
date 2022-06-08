@@ -1,77 +1,69 @@
-const _ = ' '
-const style = ''
 const storage = localStorage
-var list = []
-var cadastre = ''
+let cadastros = []
 
-document.getElementById('enviar').addEventListener('click', function (event) {
-  event.preventDefault()
+const cadastrosStorage = () => {
+  const storageContent = storage.getItem('informacoes')
+  return storageContent ? JSON.parse(storageContent) : []
+}
 
-  const nome = document.getElementById('nome').value
+const span = () => {
+  const span = document.createElement('span')
+  const iconEdit = document.createElement('i')
+  iconEdit.setAttribute('title', 'iconEdit')
+  iconEdit.setAttribute('class', 'fas fa-edit')
+  iconEdit.setAttribute('style', 'cursor:pointer; margin-inline: 1rem;')
+  span.appendChild(iconEdit)
 
-  const sobreNome = document.getElementById('sobrenome').value
+  const iconRemove = document.createElement('i')
+  iconEdit.setAttribute('title', 'iconEdit')
+  iconEdit.setAttribute('class', 'fas fa-trash')
+  iconEdit.setAttribute('style', 'cursor:pointer; margin-inline: 1rem;')
+  span.appendChild(iconRemove)
+  return span
+}
 
-  const endereco = document.getElementById('endereco').value
-
-  const complementoEndereco = document.getElementById(
-    'complementoEndereco'
-  ).value
-
-  const telefone = document.getElementById('telefone').value
-
-  const email = document.getElementById('email').value
-
-  if (!nome.length) {
-    alert('Preencha todos os campos!!!')
-    return
-  }
-
-  if (!sobreNome.length) {
-    alert('Preencha todos os campos!!!')
-    return
-  }
-
-  if (!endereco.length) {
-    alert('Preencha todos os campos!!!')
-    return
-  }
-
-  if (!complementoEndereco.length) {
-    alert('Preencha todos os campos!!!')
-    return
-  }
-
-  if (!telefone.length) {
-    alert('Preencha todos os campos!!!')
-    return
-  }
-
-  if (!email.length) {
-    alert('Preencha todos os campos!!!')
-    return
-  }
-
-  cadastre =
-    nome +
-    _ +
-    sobreNome +
-    _ +
-    endereco +
-    _ +
-    complementoEndereco +
-    _ +
-    telefone +
-    _ +
-    email
-
-  list.push(JSON.stringify(cadastre))
-  document.getElementById('formm').reset()
-  storage.setItem('CADASTROS', list)
+const createList = () => {
+  const peoples = cadastrosStorage()
 
   let ul = document.querySelector('ul')
+  ul ? ul.remove() : console.log('num tem')
 
-  let li = document.createElement('li')
-  li.innerText = cadastre
-  ul.appendChild(li)
-  console.log('li ----->', li, 'ul --->', ul)
-})
+  ul = document.createElement('ul')
+
+  peoples.forEach((item, index) => {
+    const li = document.createElement('li')
+    li.innerHTML = `Nome: ${item.nome} Sobrenome: ${item.sobreNome}, Endereço: ${item.endereco} 
+    Complemento ${item.complementoEndereco} Telefone ${item.telefone} Email ${item.email}`
+    console.log('ITEMS', item)
+    li.appendChild(span())
+    ul.appendChild(li)
+  })
+
+  document.getElementById('list-background').appendChild(ul)
+}
+
+createList()
+const setList = event => {
+  event.preventDefault()
+  const elemento = document.getElementsByTagName('input')
+
+  const cadastro = {
+    nome: document.getElementById('nome').value,
+    sobreNome: document.getElementById('sobrenome').value,
+    endereco: document.getElementById('endereco').value,
+    complementoEndereco: document.getElementById('complementoEndereco').value,
+    telefone: document.getElementById('telefone').value,
+    email: document.getElementById('email').value
+  }
+
+  cadastros.push(cadastro)
+  storage.setItem('informacoes', JSON.stringify(cadastros))
+  console.log('array cadastros ---->', cadastros)
+
+  document.querySelector('form').reset()
+
+  createList()
+}
+
+const addButton = document.getElementById('enviar')
+addButton.addEventListener('click', setList)

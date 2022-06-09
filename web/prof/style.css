@@ -56,7 +56,6 @@ ul {
   max-height: 28rem;
   min-height: 28rem;
   overflow-y: auto;
-  scrollbar-width: thin;
   width: 60%;
 }
 

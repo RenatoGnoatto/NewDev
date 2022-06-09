@@ -6,19 +6,33 @@ const cadastrosStorage = () => {
   return storageContent ? JSON.parse(storageContent) : []
 }
 
-const span = () => {
+const onClickEdit = (element) => {
+  console.log('ON CLICK EDIT', element)
+}
+
+const onClickRemove = (element) => {
+  console.log('ON CLICK REMOVE', element)
+}
+
+const span = (identificador) => {
   const span = document.createElement('span')
   const iconEdit = document.createElement('i')
-  iconEdit.setAttribute('title', 'iconEdit')
   iconEdit.setAttribute('class', 'fas fa-edit')
+  iconEdit.setAttribute('title', 'Editar')
   iconEdit.setAttribute('style', 'cursor:pointer; margin-inline: 1rem;')
+  iconEdit.setAttribute('identificador', identificador)
+  iconEdit.setAttribute('onclick', 'onClickEdit(this)')
   span.appendChild(iconEdit)
 
   const iconRemove = document.createElement('i')
-  iconEdit.setAttribute('title', 'iconEdit')
-  iconEdit.setAttribute('class', 'fas fa-trash')
-  iconEdit.setAttribute('style', 'cursor:pointer; margin-inline: 1rem;')
+  iconRemove.setAttribute('class', 'fas fa-trash')
+  iconRemove.setAttribute('title', 'Remover')
+  iconRemove.setAttribute('style', 'cursor:pointer; margin-inline: 1rem;')
+  iconRemove.setAttribute('identificador', identificador)
+  iconRemove.setAttribute('onclick', 'onClickRemove(this)')
   span.appendChild(iconRemove)
+
+
   return span
 }
 
@@ -30,12 +44,13 @@ const createList = () => {
 
   ul = document.createElement('ul')
 
-  peoples.forEach((item, index) => {
+  peoples.forEach((item, identificador) => {
     const li = document.createElement('li')
     li.innerHTML = `Nome: ${item.nome} Sobrenome: ${item.sobreNome}, Endereço: ${item.endereco} 
     Complemento ${item.complementoEndereco} Telefone ${item.telefone} Email ${item.email}`
-    console.log('ITEMS', item)
-    li.appendChild(span())
+
+
+    li.appendChild(span(identificador))
     ul.appendChild(li)
   })
 

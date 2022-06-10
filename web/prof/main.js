@@ -54,6 +54,8 @@ const salvarRegistroEditado = registroSendoEditado => {
     return pessoa
   })
 
+  // filter, indexof
+
   localStorage.setItem('listaDePessoas', JSON.stringify(pessoasAtualizadas))
 
   identificadorQueTaSendoEditado = null
@@ -140,3 +142,16 @@ const addPeople = event => {
 
 const botaoDeAdicionar = document.getElementById('btn')
 botaoDeAdicionar.addEventListener('click', addPeople)
+
+function par (idade) {
+  if(idade % 2 == 0) {
+    return idade
+  }
+}
+
+const vetor = [
+  2, 4, 6, 8, 10, 1, 3, 5, 7, 9, 0, 11, 12, 13, 14, 15, 16, 17, 18, 19
+]
+
+var vetorFinal = vetor.filter(par)
+console.log('Vetor final', vetorFinal)

@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+boyd {
+  height: 100%;
+}
+
+:root {
+  display: flex;
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(https://wallpaperaccess.com/full/2175192.jpg);
+  height: 100%;
+  font-size: 1.6rem;
+  font-family: 'Fira Code', monospace;
+  margin: auto;
+  background-repeat: no-repeat;
+}
+
+header {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 70rem;
+  height: 10%;
+}
+
+main {
+  width: 70rem;
+  height: 60%;
+}
+
+#formbkgnd {
+  height: 15rem;
+  background-color: #067d1070;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  width: 70rem;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer i {
+  padding: 1rem;
+}
+
+header button:hover {
+  background-color: #580787;
+  border: 1px solid #a200ff;
+}
+
+#formbkgnd input {
+  width: 68%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#formbkgnd label {
+  margin-left: 2rem;
+}
+
+#formbkgnd {
+  display: flex;
+  justify-content: center;
+}
+
+#list {
+  margin-top: 7rem;
+  height: 45rem;
+  width: 70rem;
+  background-color: #067d1070;
+}
+
+#butao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#addBtn {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 14rem;
+  height: 6rem;
+  background-color: #067d1070;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
+
+#addBtn:hover {
+  width: 18rem;
+  height: 8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

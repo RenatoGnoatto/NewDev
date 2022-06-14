@@ -1,116 +1,146 @@
 * {
-  margin: auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html,
-body {
+boyd {
   height: 100%;
 }
 
 :root {
+  display: flex;
   font-size: 62.5%;
 }
 
 body {
+  background-image: url(https://wallpaperaccess.com/full/2175192.jpg);
+  height: 100%;
   font-size: 1.6rem;
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
+  margin: auto;
+  background-repeat: no-repeat;
 }
 
-.cmc {
-  width: 44.5rem;
-  height: 6.2rem;
-  background-color: #2f6e6d;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.cmc h1 {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
-}
-
-main .fundo {
-  width: 44.5rem;
-  height: 37rem;
-  background: #47b5b0;
-  display: flex;
-  justify-content: center;
-}
-
-.fundoForm {
-  width: 28.9rem;
-  height: 37rem;
-  background: #ffffff;
-}
-
-#formm {
+header {
+  margin-top: 10rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-}
-
-label {
-  display: block;
-  margin-top: 2rem;
-}
-
-.fundoBot {
-  width: 44.5rem;
-  height: 6.2rem;
-  background: #2f6e6d;
   align-items: center;
+  justify-content: space-around;
+  width: 70rem;
+  height: 25rem;
+}
+
+main {
+  width: 70rem;
+  height: 60%;
+}
+
+#formbkgnd {
+  height: 15rem;
+  background-color: #067d1070;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  width: 70rem;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer i {
+  padding: 1rem;
+}
+
+header button:hover {
+  background-color: #580787;
+  border: 1px solid #a200ff;
+}
+
+#formbkgnd input {
+  width: 68%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#formbkgnd label {
+  margin-left: 2rem;
+}
+
+#formbkgnd {
   display: flex;
   justify-content: center;
 }
 
-.fundoBot button {
-  border: 0;
-  background: #ffffff6b;
+#list {
+  margin-top: 7rem;
+  height: 45rem;
+  width: 70rem;
+  background-color: #067d1070;
 }
 
-.fundoBot #enviar {
-  width: 12.8rem;
-  height: 3.2rem;
-  border-radius: 2rem;
-  border: 2px solid rgba(29, 208, 36, 0.78);
-}
-
-.fundoBot #enviar:hover {
-  background: rgba(29, 208, 36, 0.78);
-  border: 0;
-}
-
-.fundoBot button:hover {
-  cursor: pointer;
-}
-
-#list-section {
-  width: 44.5rem;
-  height: 20rem;
-  background-color: #47b5b0;
-}
-
-#list-background {
-  width: 30rem;
-  height: 20rem;
-  background-color: #ffffff;
+#butao {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: center;
+}
+
+header button {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 14rem;
+  height: 6rem;
+  background-color: #067d1070;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
+
+header button:hover {
+  width: 18rem;
+  height: 8rem;
+  margin: 1rem;
+}
+
+#list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ul {
-  margin-left: 3rem;
-  display: block;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  list-style: none;
-  max-height: 15rem;
-  min-height: 15rem;
+  justify-content: center;
+  width: 50rem;
+  max-height: 30rem;
+  min-height: 30rem;
   overflow-y: auto;
+}
+
+li {
+  list-style: none;
+}
+
+#quantityEdit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#quantityEditForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

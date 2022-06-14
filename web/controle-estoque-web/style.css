@@ -15,12 +15,11 @@ boyd {
 }
 
 body {
-  background-image: url(https://wallpaperaccess.com/full/2175192.jpg);
+  background-color: #ffff;
   height: 100%;
   font-size: 1.6rem;
   font-family: 'Fira Code', monospace;
   margin: auto;
-  background-repeat: no-repeat;
 }
 
 header {
@@ -30,7 +29,7 @@ header {
   align-items: center;
   justify-content: space-around;
   width: 70rem;
-  height: 10%;
+  height: 25rem;
 }
 
 main {
@@ -56,11 +55,6 @@ footer {
 
 footer i {
   padding: 1rem;
-}
-
-header button:hover {
-  background-color: #580787;
-  border: 1px solid #a200ff;
 }
 
 #formbkgnd input {
@@ -93,7 +87,7 @@ header button:hover {
   justify-content: center;
 }
 
-#addBtn {
+header button {
   margin-top: 2rem;
   margin-bottom: 2rem;
   width: 14rem;
@@ -106,9 +100,65 @@ header button:hover {
   border: 0;
 }
 
-#addBtn:hover {
+header button:hover {
   width: 18rem;
   height: 8rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem;
+}
+
+#list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50rem;
+  max-height: 30rem;
+  min-height: 30rem;
+  overflow-y: auto;
+}
+
+li {
+  list-style: none;
+}
+
+#quantityEdit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#quantityEditForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#wareHouseCapacity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 70rem;
+  height: 8rem;
+  background-color: #067d1070;
+}
+
+#myProgress {
+  width: 50rem;
+  height: 3rem;
+  background-color: gray;
+}
+
+#myBar {
+  width: 20rem;
+  background-color: rgb(0, 255, 0);
+  text-align: center;
+  line-height: 3rem;
+  color: white;
 }

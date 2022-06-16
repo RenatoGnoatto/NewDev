@@ -13,18 +13,12 @@ const percentageBar = () => {
   cars.forEach(item => {
     totalCars += +item.quantity
   })
-
+console.log('aaaa', totalCars)
   var totalPercentage = totalCars / 2
   const elem = document.getElementById('myBar')
   const width = totalPercentage
   elem.style.width = `${width}%`
   elem.innerHTML = `${totalCars}/200`
-}
-
-percentageBar()
-const log = () => {
-  event.preventDefault()
-  console.log('aehow')
 }
 
 const isWareHouseFull = (initialQuantity, operation) => {
@@ -42,8 +36,14 @@ const isWareHouseFull = (initialQuantity, operation) => {
 
 const operation = () => {
   event.preventDefault()
-  const inputOption = document.getElementsByName('Editstock')
-  console.log('inputOption')
+  const add = document.getElementById('addInput').checked
+  const minus = document.getElementById('removeInput').checked
+
+  add == true
+    ? addingCar()
+    : minus == true
+    ? subtractCar()
+    : console.log('fudeu')
 }
 
 const addingCar = car => {
@@ -92,7 +92,7 @@ const onClickEdit = item => {
     form = document.createElement('form')
     form.setAttribute(
       'style',
-      'background-color: #067d1070; width:60rem; height:20rem;'
+      'background-color: #067d1070; width:70rem; height:20rem;'
     )
     form.setAttribute('id', 'quantityEditForm')
 
@@ -137,21 +137,11 @@ const onClickEdit = item => {
     removeInput.setAttribute('style', 'margin-left:11rem; margin-right:5rem')
     inputDiv.appendChild(removeInput)
 
-    const btnDiv = document.createElement('div')
-    btnDiv.setAttribute(
-      'style',
-      'height:10rem; width:60rem; display:flex; align-itens:cente; justify-content:center'
-    )
-
-    const buttonSubmit = document.createElement('button')
-    buttonSubmit.setAttribute(
-      'style',
-      'width:10rem; height:5rem; background-color:#fff; border-radius:5rem; border:0'
-    )
-    buttonSubmit.innerHTML = 'Enviar'
-    buttonSubmit.setAttribute('id', 'submitButton')
-    buttonSubmit.setAttribute('onclick', 'operation(this)')
-    btnDiv.appendChild(buttonSubmit)
+    const submitButton = document.createElement('input')
+    submitButton.setAttribute('id', 'submitButton')
+    submitButton.setAttribute('type', 'submit')
+    submitButton.setAttribute('name', 'Editstock')
+    submitButton.setAttribute('onclick', 'operation(this)')
 
     formDiv.appendChild(labelDiv)
     formDiv.appendChild(inputDiv)
@@ -159,7 +149,7 @@ const onClickEdit = item => {
     form.appendChild(label)
     form.appendChild(input)
     form.appendChild(formDiv)
-    form.appendChild(btnDiv)
+    form.appendChild(submitButton)
 
     document.getElementById('quantityEdit').appendChild(form)
 
@@ -224,5 +214,39 @@ const register = event => {
   document.querySelector('form').reset()
 }
 
+const searchList = event => {
+  event.preventDefault()
+  const searchInput = document.getElementById('searchInput').value
+  let searchCars = []
+  searchCars = cars.filter(
+    item =>
+      item.brand.includes(searchInput) ||
+      item.model.includes(searchInput) ||
+      item.year.includes(searchInput)
+  )
+  console.log(searchCars)
+
+  var ul = document.querySelector('ul')
+  if (ul) {
+    ul.remove()
+  }
+
+  ul = document.createElement('ul')
+  searchCars.forEach((item, index) => {
+    const li = document.createElement('li')
+    li.innerHTML = `Brand: ${item.brand};
+    Model: ${item.model};
+    Year: ${item.year};
+    Quantity: ${item.quantity}`
+
+    li.appendChild(span(index))
+    ul.appendChild(li)
+  })
+  document.getElementById('list').appendChild(ul)
+}
+
 const botaoDeAdicionar = document.getElementById('addBtn')
 botaoDeAdicionar.addEventListener('click', register)
+
+const searchForm = document.getElementById('searchForm')
+searchForm.addEventListener('keyup', searchList)

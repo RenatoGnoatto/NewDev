@@ -13,7 +13,7 @@ const percentageBar = () => {
   cars.forEach(item => {
     totalCars += +item.quantity
   })
-console.log('aaaa', totalCars)
+  console.log('aaaa', totalCars)
   var totalPercentage = totalCars / 2
   const elem = document.getElementById('myBar')
   const width = totalPercentage
@@ -120,7 +120,7 @@ const onClickEdit = item => {
     const addInput = document.createElement('input')
     addInput.setAttribute('id', 'addInput')
     addInput.setAttribute('type', 'radio')
-    addInput.setAttribute('name', 'Editstock')
+    addInput.setAttribute('name', 'editstock')
     addInput.setAttribute('style', 'margin-left:8rem; margin-right:5rem')
     inputDiv.appendChild(addInput)
 
@@ -133,14 +133,14 @@ const onClickEdit = item => {
     const removeInput = document.createElement('input')
     removeInput.setAttribute('id', 'removeInput')
     removeInput.setAttribute('type', 'radio')
-    removeInput.setAttribute('name', 'Editstock')
+    removeInput.setAttribute('name', 'editstock')
     removeInput.setAttribute('style', 'margin-left:11rem; margin-right:5rem')
     inputDiv.appendChild(removeInput)
 
     const submitButton = document.createElement('input')
     submitButton.setAttribute('id', 'submitButton')
     submitButton.setAttribute('type', 'submit')
-    submitButton.setAttribute('name', 'Editstock')
+    submitButton.setAttribute('name', 'editstock')
     submitButton.setAttribute('onclick', 'operation(this)')
 
     formDiv.appendChild(labelDiv)

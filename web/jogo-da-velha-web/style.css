@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+:root {
+  display: flex;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #ffff;
+  height: 100%;
+  font-size: 1.6rem;
+  margin: auto;
+  margin-top: 20rem;
+}
+
+td {
+  height: 10rem;
+  width: 10rem;
+  border: 1px solid black;
+}
+
+td:hover {
+  background-color: aliceblue;
+}
+
+tr,
+td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

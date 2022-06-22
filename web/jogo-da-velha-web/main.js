@@ -21,7 +21,7 @@ elements.forEach((item, index) => {
 const addIcon = item => {
   const identifier = item.getAttribute('identifier')
   const element = elements[identifier]
-  console.log('item', identifier)
+
   if (!element.innerHTML) {
     cont % 2 === 0
       ? ((element.innerHTML = 'Xis'),
@@ -29,27 +29,58 @@ const addIcon = item => {
         xHouses.push(element))
       : ((element.innerHTML = 'Bol'),
         element.setAttribute('style', 'color:rgba(243, 16, 16, 0.527)'),
-        xHouses.push(element))
+        oHouses.push(element))
     cont++
   } else {
     return
   }
+
   oHouses.forEach((item, index) => {
-    const x1 = oHouses[index].getAttribute('x')
-    const x2 = oHouses[index + 1].getAttribute('x')
-    const x3 = oHouses[index + 2].getAttribute('x')
-    const y1 = oHouses[index].getAttribute('y')
-    const y2 = oHouses[index + 1].getAttribute('y')
-    const y3 = oHouses[index + 2].getAttribute('y')
-    console.log('ga', oHouses)
-    alignCondition(x1, y1, x2, y2, x3, y3)
+    var x1 = oHouses[index]
+    var x2 = oHouses[index + 1]
+    var x3 = oHouses[index + 2]
+    var y1 = oHouses[index]
+    var y2 = oHouses[index + 1]
+    var y3 = oHouses[index + 2]
+    console.log('forEach')
+    if (!x1 || !x2 || !x3 || !y1 || !y2 || !y3) {
+      return
+    } else {
+      var x1 = x1.getAttribute('x')
+      var x2 = x2.getAttribute('x')
+      var x3 = x3.getAttribute('x')
+      var y1 = y1.getAttribute('y')
+      var y2 = y2.getAttribute('y')
+      var y3 = y3.getAttribute('y')
+      alignCondition(x1, y1, x2, y2, x3, y3, 'bola ganha')
+    }
+  })
+
+  xHouses.forEach((item, index) => {
+    var x1 = xHouses[index]
+    var x2 = xHouses[index + 1]
+    var x3 = xHouses[index + 2]
+    var y1 = xHouses[index]
+    var y2 = xHouses[index + 1]
+    var y3 = xHouses[index + 2]
+    console.log('forEach')
+    if (!x1 || !x2 || !x3 || !y1 || !y2 || !y3) {
+      return
+    } else {
+      var x1 = x1.getAttribute('x')
+      var x2 = x2.getAttribute('x')
+      var x3 = x3.getAttribute('x')
+      var y1 = y1.getAttribute('y')
+      var y2 = y2.getAttribute('y')
+      var y3 = y3.getAttribute('y')
+      alignCondition(x1, y1, x2, y2, x3, y3, 'cruz ganha')
+    }
   })
 }
 
-const alignCondition = (x1, y1, x2, y2, x3, y3) => {
-  if (x1 * y2 + y1 * x3 + x2 * y3 - (x3 * y2 + y3 * x1 + x2 * x1) == 0) {
-    alert('dgfed')
-    console.log('deu')
+const alignCondition = (x1, y1, x2, y2, x3, y3, lado) => {
+  if (x1 * y2 + y1 * x3 + x2 * y3 - (x3 * y2 + y3 * x1 + x2 * y1) == 0) {
+    alert(lado)
   } else {
     return false
   }

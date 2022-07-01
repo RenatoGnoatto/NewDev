@@ -1,14 +1,13 @@
 {
   "name": "read-file",
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "npx nodemon index.js"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "nodemon": "^2.0.18"
   }

@@ -8,6 +8,8 @@ const getUsers = (request, response) => {
   const { name, lastName, age, remove } = URL.parse(request.url, true).query
   let message = ''
 
+  response.writeHead(200, { 'Access-Control-Allow-Origin': '*' })
+
   if (name) {
     const user = {
       name,

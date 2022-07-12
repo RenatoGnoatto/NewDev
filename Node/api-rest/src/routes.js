@@ -1,10 +1,7 @@
 const express = require('express')
 const routes = express.Router()
 
-//const indexController = require('./controllers/indexController.js')
-const authorController = require('./controllers/AuthorController')
-
-const BookController = require('./controllers/BookController')
+const authorController = require('./controllers/AuthorController.js')
 
 //Authors
 
@@ -12,22 +9,11 @@ routes.get('/authors', authorController.get)
 
 routes.post('/authors', authorController.post)
 
-routes.delete('/authors/:id', authorController.delete)
+routes.delete('/authors/:id', authorController.deleteById)
 
-routes.put('authors/:id', authorController.put)
+routes.put('authors/:id', authorController.putById)
 
-routes.patch('authors/:id', authorController.patch)
+routes.patch('authors/:id', authorController.patchById)
+
 
 module.exports = routes
-
-//Books routes
-
-routes.get('/books', BookController.get)
-
-routes.post('/books/:id', BookController.post)
-
-routes.delete('/books/:id', BookController.delete)
-
-routes.put('/books/:id', BookController.put)
-
-routes.patch('/books/:id', BookController.patch)

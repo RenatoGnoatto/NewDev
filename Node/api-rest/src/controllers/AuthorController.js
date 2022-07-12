@@ -1,25 +1,41 @@
-exports.get = (req, res) => {
-  const query = req.query
-  console.log('API is available', query)
-  return res.status(200).send('It was getted')
-} 
+const database = require('../database/knex')
 
-exports.post = (req, res) => {
-  console.log('RECEBENDO DADOS', req.body)
-  return res.status(200).send(req.body)
+exports.get = async (req, res) => {
+  try {
+    const sql = await database.select('*').from('authors')
+    console.log('sql', sql)
+    return res.status(200).send(sql)
+  } catch (error) {
+    return res.status(500).send({ error: error?.message || e })
+  }
+}
+
+exports.post = async (req, res) => {
+  try {
+    await database('authors').insert(req.body)
+    return res.status(200).send({
+      status: 'success',
+      data: await database.select('*').from('authors')
+    })
+  } catch (error) {
+    return res.status(500).send({ error: error?.message || e })
+  }
 }
 
 exports.deleteById = (req, res) => {
   const params = req.params
   console.log('delete')
+  return res.status(200).send('params', params)
 }
 
 exports.putById = (req, res) => {
   const params = req.params
   console.log('put')
+  return res.status(200).send('params', params)
 }
 
 exports.patchById = (req, res) => {
   const params = req.params
   console.log('patch')
+  return res.status(200).send('params', params)
 }

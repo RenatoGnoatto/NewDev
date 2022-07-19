@@ -1,0 +1,13 @@
+[
+  {
+    "curso": {
+      "name": "Java",
+      "aulas": [{
+        "title": "Aula sobre polimorfia em Java",
+        "desciption": "Uma aula na qual vc aprenderá sobre polimorfia em Java",
+        "link": "link da aular",
+        "teacher": "nico"
+      }]
+    }
+  }
+]

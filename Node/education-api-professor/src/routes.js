@@ -2,12 +2,10 @@ const express = require('express');
 
 const routes = express.Router();
 
-const {
-  CursesController,
-  InstructorsController,
-  LessonsController,
-  IndexController
-} = require('./controllers/index');
+IndexController = require('./controllers/IndexController');
+CursesController = require('./controllers/CurseControllers');
+InstructorsController = require('./controllers/InstructorsController');
+LessonsController = require('./controllers/LessonsController');
 
 routes.get('/', IndexController.index);
 

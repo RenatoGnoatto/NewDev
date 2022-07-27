@@ -1,3 +1,16 @@
-<app-card-example></app-card-example>
-<app-card-example></app-card-example>
-<app-card-example></app-card-example>
+<div class="w-100 h-100">
+  <app-retangulo></app-retangulo>
+
+  <div class="main row w-100">
+    <div class="col-4 d-flex justift-content-cente">
+      <app-quadrado 
+      [nameparam] = "fullName"
+      [bioParam] = "biography"
+      [link1Param] = "link1"
+      [link2Param] = "link2"
+      [subtitleParam] = "subtitle"
+      ></app-quadrado>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>

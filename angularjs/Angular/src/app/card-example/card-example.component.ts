@@ -6,6 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-example.component.css']
 })
 export class CardExampleComponent implements OnInit {
+  fullName: string = 'gador'
+  biologia: string = 'estudo da vida'
+
+  students: string[] = [
+    'Michael Scott',
+    'babaduab',
+    'abubaba',
+    'amue'
+  ]
 
   constructor() { }
 

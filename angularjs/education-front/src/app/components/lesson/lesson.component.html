@@ -1,1 +1,21 @@
-<p>lesson works!</p>
+<div class="cursor-pointer">
+  <span class="date-format"> 28/07/22 </span>
+
+  <div class="card-lesson rounded p-2 mt-2">
+    <header class="d-flex justify-content-between align-items-center">
+      <i
+        (click)="clickOnChek()"
+        class="fa-solid fa-circle-check {{ state }}"
+      ></i>
+
+      <span class="d-flex aliign-items-center gap-2 text-info"
+        >Conteúdo liverado</span
+      >
+      <span class="span-type px-2">aula prática</span>
+    </header>
+
+    <strong class="d-block mt-3">
+      Aula de logica de lógica de programação
+    </strong>
+  </div>
+</div>

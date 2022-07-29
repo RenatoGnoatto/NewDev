@@ -1,0 +1,14 @@
+aside {
+  width: 348px;
+  border-left: 1px solid #29292e;
+  background: #121214;
+  max-height: 765px;
+  min-height: 765px;
+  overflow-y: auto;
+}
+
+span {
+  border-bottom: 1px solid #29292e;
+  font-weight: bold;
+}
+
